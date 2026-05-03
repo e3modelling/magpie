@@ -6,8 +6,7 @@ magpie_calib.*
 #ignore input files
 *.cs*
 !/data-changelog.csv
-!/scenario_config_mUPTAKE.csv
-!/scenario_config_magpie_UPTAKE.csv
+!/projects/*/*.csv
 *.mz
 *.rds
 /input/
