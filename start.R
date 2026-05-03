@@ -47,7 +47,7 @@ if (nzchar(project) && nzchar(subscenario)) {
   # ====================================================================
   # Project-driven cfg assembly (mode a / b)
   # ====================================================================
-  proj_dir      <- file.path("projects", project)
+  proj_dir      <- file.path("e3m_projects", project)
   scenarios_csv <- file.path(proj_dir, "scenarios.csv")
   overlays_csv  <- file.path(proj_dir, "overlays.csv")
 
