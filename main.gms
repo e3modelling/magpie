@@ -181,7 +181,7 @@ $offlisting
 
 $setglobal c_timesteps  coup2100
 $setglobal c_past  till_2015
-$setglobal c_title  default
+$setglobal c_title  GreenGrowth
 
 scalars
 s_use_gdx   use of gdx files                                       / 0 /
@@ -227,7 +227,7 @@ $setglobal transport  gtap_nov12
 $setglobal area_equipped_for_irrigation  endo_apr13
 $setglobal water_demand  all_sectors_aug13
 $setglobal water_availability  total_water_aug13
-$setglobal biodiversity  bii_target
+$setglobal biodiversity  bv_btc_mar21
 $setglobal climate  static
 
 $setglobal nr_soil_budget  macceff_aug22

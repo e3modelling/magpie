@@ -31,39 +31,15 @@ $setglobal c15_EAT_scen  FLX
 * Set-switch for countries affected by country-specific exogenous diet scenario
 * Default: all iso countries selected
 sets
-  scen_countries15(iso) countries to be affected by selected food sceanrio / ABW,AFG,AGO,AIA,ALA,ALB,AND,ARE,ARG,ARM,
-                      ASM,ATA,ATF,ATG,AUS,AUT,AZE,BDI,BEL,BEN,
-                      BES,BFA,BGD,BGR,BHR,BHS,BIH,BLM,BLR,BLZ,
-                      BMU,BOL,BRA,BRB,BRN,BTN,BVT,BWA,CAF,CAN,
-                      CCK,CHN,CHE,CHL,CIV,CMR,COD,COG,COK,COL,
-                      COM,CPV,CRI,CUB,CUW,CXR,CYM,CYP,CZE,DEU,
-                      DJI,DMA,DNK,DOM,DZA,ECU,EGY,ERI,ESH,ESP,
-                      EST,ETH,FIN,FJI,FLK,FRA,FRO,FSM,GAB,GBR,
-                      GEO,GGY,GHA,GIB,GIN,GLP,GMB,GNB,GNQ,GRC,
-                      GRD,GRL,GTM,GUF,GUM,GUY,HKG,HMD,HND,HRV,
-                      HTI,HUN,IDN,IMN,IND,IOT,IRL,IRN,IRQ,ISL,
-                      ISR,ITA,JAM,JEY,JOR,JPN,KAZ,KEN,KGZ,KHM,
-                      KIR,KNA,KOR,KWT,LAO,LBN,LBR,LBY,LCA,LIE,
-                      LKA,LSO,LTU,LUX,LVA,MAC,MAF,MAR,MCO,MDA,
-                      MDG,MDV,MEX,MHL,MKD,MLI,MLT,MMR,MNE,MNG,
-                      MNP,MOZ,MRT,MSR,MTQ,MUS,MWI,MYS,MYT,NAM,
-                      NCL,NER,NFK,NGA,NIC,NIU,NLD,NOR,NPL,NRU,
-                      NZL,OMN,PAK,PAN,PCN,PER,PHL,PLW,PNG,POL,
-                      PRI,PRK,PRT,PRY,PSE,PYF,QAT,REU,ROU,RUS,
-                      RWA,SAU,SDN,SEN,SGP,SGS,SHN,SJM,SLB,SLE,
-                      SLV,SMR,SOM,SPM,SRB,SSD,STP,SUR,SVK,SVN,
-                      SWE,SWZ,SXM,SYC,SYR,TCA,TCD,TGO,THA,TJK,
-                      TKL,TKM,TLS,TON,TTO,TUN,TUR,TUV,TWN,TZA,
-                      UGA,UKR,UMI,URY,USA,UZB,VAT,VCT,VEN,VGB,
-                      VIR,VNM,VUT,WLF,WSM,YEM,ZAF,ZMB,ZWE /
+  scen_countries15(iso) countries to be affected by selected food sceanrio / AUT, BEL, BGR, HRV, CYP, CZE, DNK, EST, FIN, FRA, DEU, GRC, HUN, IRL, ITA, LVA, LTU, LUX, MLT, NLD, POL, PRT, ROU, SVK, SVN, ESP, SWE, GBR /
 ;
 
 $onMultiR
-set    kfo_rd(kfo) Ruminant meat and dairy food products / livst_rum /;
+set    kfo_rd(kfo) Ruminant meat and dairy food products / livst_rum,livst_milk /;
 $offMulti
 
 scalars
-s15_elastic_demand                  Elastic demand switch (1=elastic 0=exogenous) (1) / 0 /
+s15_elastic_demand                  Elastic demand switch (1=elastic 0=exogenous) (1) / 1 /
 s15_tax_recycling                   Tax recycling multiplier (1=distribution neutral) (1) / 1 / 
 s15_calibrate                       Calibration switch (1=calibrated 0=pure regression outcomes) (1) / 1 /
 * only for per-capita calories, not for e.g. calibration of transformation parameters between per-capita calories in dm
@@ -71,8 +47,8 @@ s15_maxiter                         Scalar defining maximum number of iterations
 s15_convergence                     Convergence criterion (1) / 0.005 /
 s15_convergence_partstep            Share of last iteration for convergence (1=only current iteration 0.5=half last iteration) / 0.5 /
 * maximum relative per-capita gdp difference within a region between two iteratios
-s15_exo_waste                       Switch for transition towards exogenous food waste scenario (1)  / 0 /
-s15_waste_scen                      Scenario target for the ratio between food demand and intake (1)  / 1.2 /
+s15_exo_waste                       Switch for transition towards exogenous food waste scenario (1)  / 1 /
+s15_waste_scen                      Scenario target for the ratio between food demand and intake (1)  / 1.237 /
 s15_exo_diet                        Switch for transition towards exogenous diet scenario (1)  / 0 /
 * The following switches only become active when s15_exo_diet is active
 * They define which components of the diet should become active
@@ -105,7 +81,7 @@ s15_fish_substitution               Fish substitution share (1) / 0 /
 s15_alcohol_substitution            Alcohol substitution share (1) / 0 /
 s15_livestock_substitution          Livestock substitution share (1) / 0 /
 s15_rumdairy_substitution           Ruminant meat and dairy substitution share (1) / 0 /
-s15_rumdairy_scp_substitution       Ruminant meat and dairy substitution with SCP share (1) / 0 /
+s15_rumdairy_scp_substitution       Ruminant meat and dairy substitution with SCP share (1) / 0.04 /
 s15_livescen_target                 Switch for livestock food calorie supply target (1) / 0 /
 s15_exo_foodscen_functional_form    Switch for functional form of exogenous food scenario fader (1) / 1 /
 s15_exo_foodscen_start              Food substitution start year        / 2025 /

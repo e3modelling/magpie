@@ -60,6 +60,6 @@ parameters
  oq59_nr_som_fertilizer(t,j,type)                    Bound of nitrogen fertilizer of soil organic matter loss (Mt N per yr)
  oq59_nr_som_fertilizer2(t,j,type)                   Fraction of soil organic matter loss take is taken up by plants (Mt N per yr)
  oq59_carbon_soil(t,j,land,stockType,type)           Soil carbon content calculation (mio. tC)
- oq59_cost_scm(t,j,type)                             Recurring cost for soil carbon management on cropland (mio. USD17MER per yr)
+ oq59_cost_scm(t,j,type)                             Recurring cost for soil carbon management on cropland (mio. USD17MER per yr)       
 ;
 *##################### R SECTION END (OUTPUT DECLARATIONS) #####################
